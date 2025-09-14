@@ -9,6 +9,7 @@
   <body>
     <div class="main-app">
       <h1 id="main-heading">ExPenSe TraCker</h1>
+      
       <div class="main-balance">
         <h3 id="your-balance">YoUr BalAnce</h3>
         <h1 id="balance-display">₹2,200.00</h1>
@@ -23,13 +24,84 @@
           </div>
         </div>
       </div>
+
       <div class="transactions">
-            <div class="transaction-history">
-                <p>TransActions</p>
+        <div class="transaction-history">
+          <h3 id="transactions-title">TransActions</h3>
+          <div class="transactions-wrapper">
+            <!-- <div class="card expense">
+                <span>AirPods</span>
+                <p id="amount">-₹25,000.00</p>
             </div>
-            <div class="data-input">
-                <p>Add TransActions</p>
+            <div class="card income">
+                <span>PayCheck 3</span>
+                <p id="amount">₹15,00,000.00</p>
             </div>
+            <div class="card expense">
+                <span>AirPods</span>
+                <p id="amount">-₹25,000.00</p>
+            </div>
+            <div class="card income">
+                <span>PayCheck 3</span>
+                <p id="amount">₹15,00,000.00</p>
+            </div>
+            
+            <div class="card expense">
+                <span>AirPods</span>
+                <p id="amount">-₹25,000.00</p>
+            </div>
+            <div class="card income">
+                <span>PayCheck 3</span>
+                <p id="amount">₹15,00,000.00</p>
+            </div>
+            
+            <div class="card expense">
+                <span>AirPods</span>
+                <p id="amount">-₹25,000.00</p>
+            </div>
+            <div class="card income">
+                <span>PayCheck 3</span>
+                <p id="amount">₹15,00,000.00</p>
+            </div>
+            
+            <div class="card expense">
+                <span>AirPods</span>
+                <p id="amount">-₹25,000.00</p>
+            </div>
+            <div class="card income">
+                <span>PayCheck 3</span>
+                <p id="amount">₹15,00,000.00</p>
+            </div> -->
+          </div>
+        </div>
+
+
+
+        <div class="data-input">
+          <form>
+            <h2>Add TransActions</h2>
+            <div class="input-wrapper">
+              <label for="description">Description</label>
+              <input
+                type="text"
+                id="description"
+                placeholder="Enter Description..."
+              />
+            </div>
+
+            <div class="input-wrapper">
+              <label for="amount">Amount</label>
+              <input
+                type="number"
+                id="amount"
+                placeholder="Please Enter Amount..."
+              />
+              <p id="info-text">Use Negative (-) For ExPenSes</p>
+            </div>
+          </form>
+
+          <button id="data-entry-button">Add TransAction</button>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
