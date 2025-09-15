@@ -17,14 +17,14 @@ body {
 
 .main-app {
   background-color: white;
-    position : relative ; 
-    min-height : 100vh ; 
+  position: relative;
+  min-height: 100vh;
   width: 90%;
 
   margin: 0 auto;
   border-radius: 20px;
   padding: 0 1rem;
-  padding-bottom : 1rem ; 
+  padding-bottom: 1rem;
 
   display: flex;
   flex-direction: column;
@@ -35,11 +35,12 @@ body {
   margin: 2rem 0;
 }
 
-
 #balance-display {
-    font-weight : 600 ; 
-    margin-top : 1rem ;
-    font-size : 3rem ;  
+  font-weight: 600;
+  margin-top: 1rem;
+  font-size: 3rem;
+  word-break: break-all;
+  text-align: center;
 }
 
 .main-balance {
@@ -48,192 +49,294 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding : 1rem 1.75rem ; 
-  border-radius : 10px ; 
+  padding: 1rem 1.75rem;
+  border-radius: 10px;
 }
 
-.income-expense-container { 
-    width : 100% ; 
-    display : flex ;  
-    align-items : center ;
-    gap : 1rem ;  
-    justify-content : space-between ;  
+.income-expense-container {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .financials {
-    background-color : white ; 
-    width : 50% ;
-    display : flex ; 
-    flex-direction : column ; 
-    align-items : center ; 
-    padding : 1.5rem ; 
-    border-radius : 14px ;  
-    margin-top : 2.5rem ; 
+  background-color: white;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  border-radius: 14px;
+  margin-top: 2.5rem;
 }
 
 .title {
-    margin-bottom : 0.5rem ; 
+  margin-bottom: 0.5rem;
 }
 
-#fin-income { 
-    color : #00be62 ; 
+#fin-income {
+  color: #00be62;
 }
 
-#fin-expense { 
-    color : red ; 
+#fin-expense {
+  color: red;
 }
 
-.transactions { 
-    margin-top : 2rem ; 
-    display : flex ; 
-    justify-content : space-between ; 
-    align-items : flex-start ; 
-    flex : 1; 
-    width : 100% ; 
-    gap : 1rem ; 
+#fin-income,
+#fin-expense {
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.transaction-history , .data-input { 
-    width : 100% ;  
+#fin-income:hover,
+#fin-expense:hover {
+  transform: translateY(-5px);
 }
 
-.data-input { 
-    background-color : #e6e6e9 ; 
-    padding : 1rem ; 
-    border-radius : 20px ; 
-    display : flex ; 
-    flex-direction : column ; 
-    justify-content : space-between ; 
-    align-self : stretch ; 
+.transactions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1;
+  width: 100%;
+  gap: 1rem;
 }
 
-#data-entry-button {
-    background-color : rgb(53, 146, 53) ; 
-    outline : 0 ; 
-    border : 0 ; 
-    padding : 1rem ; 
-    border-radius : 7px ; 
-    color : white ; 
-    font-weight : 600 ; 
-    cursor : pointer ; 
+.transaction-history,
+.data-input {
+  width: 100%;
+}
+
+.data-input {
+  background-color: #e6e6e9;
+  padding: 1rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: stretch;
+}
+
+button[type="submit"] {
+  background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  outline: 0;
+  border: 0;
+  padding: 1rem;
+  border-radius: 7px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+button[type="submit"]:active {
+  transform: translateY(0px);
 }
 
 form {
-    display : flex ; 
-    flex-direction : column ; 
-    gap : 1rem ; 
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-grow: 1;
 }
 
-.input-wrapper { 
-    width : 100% ; 
-    display : flex ; 
-    flex-direction : column ; 
+.input-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-input { 
-    outline : 0 ; 
-    border : 0 ; 
-    width : 100% ; 
-    padding : 1rem ; 
-    border-radius : 7px ; 
-    margin-top : 0.5rem ; 
+input {
+  outline: 0;
+  border: 0;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 7px;
+  margin-top: 0.5rem;
 }
 
-input:focus { 
-    border : 2px solid #007bff ; 
+input:focus {
+  border: 2px solid #007bff;
 }
 
-#info-text { 
-    margin-top : 0.5rem ; 
-    font-size : 1rem ; 
-    color : rgb(84, 84, 84) 
+#info-text {
+  margin: 0.5rem 0rem;
+  font-size: 1rem;
+  color: rgb(84, 84, 84);
 }
 
 .transaction-history {
-    display : flex ; 
-    flex-direction : column ; 
-    gap : 1rem ;  
-    align-self : stretch ; 
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-self: stretch;
 }
 
-.transactions-wrapper { 
-    display : flex ; 
-    flex-direction : column ;
-    gap : 0.5rem ;    
-    max-height : 500px ; 
-    overflow-y : scroll ; 
-    padding-right : 0.5rem ; 
+.transactions-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 500px;
+  overflow-y: scroll;
+  padding-right: 5px;
+  flex-grow: 1;
+  transition: all 0.3s ease;
+  padding-top: 5px;
 }
 
-.card { 
-    display : flex ; 
-    justify-content : space-between ; 
-    padding : 1.5rem ; 
-    border-radius: 10px ; 
-    box-shadow : 0px 2px 5px 1px rgba(0, 0, 0, 0.09) ; 
+.transactions-wrapper::-webkit-scrollbar {
+  width: 8px;
 }
 
-.card.expense { 
-    border-right : 5px solid red ; 
+.transactions-wrapper::-webkit-scrollbar-thumb {
+  background-color: #a5a5a5;
+  border-radius: 4px;
 }
 
-.card.income { 
-    border-right : 5px solid #4db564 ; 
+.transactions-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: #a0aec0;
+}
+
+.transactions-wrapper::-webkit-scrollbar-track {
+  background-color: #cbd5e0;
+  border-radius: 4px;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.09);
+  animation: glide 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 #amount {
-    margin-right : 30px ; 
+  margin-left: 1rem;
+  text-wrap: nowrap;
 }
 
-#transactions-title { 
-    font-weight : 500 ; 
+.card:hover {
+  transform: translateY(-5px);
 }
 
-/* @media screen and (max-width: 1100px) {
-    .main-app {
-        background-color : yellow ; 
-        width : 100% ; 
-    }
-} */
+@keyframes glide {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
 
-@media screen and (max-width : 768px ) {
-    html, body { 
-        padding : 1rem 0.2rem ; 
-    }
-
-    .main-app {
-        width : 100% ; 
-    }
-
-    .main-balance {
-        padding : 1rem ; 
-    }
-
-    .transactions {
-        flex-direction : column ; 
-        gap : 2rem ; 
-    }
-
-    .transaction-history {
-        height : 500px ; 
-    }
-
-    #data-entry-button { 
-        margin-top : 4rem ; 
-    }
+  to {
+    opacity: 1;
+    transforom: translateX(0px);
+  }
 }
 
-@media screen and (max-width : 500px) {
+.card.expense {
+  border-right: 5px solid red;
+}
 
-    .income-expense-container {
-        flex-direction : column ; 
-    }
+.card.income {
+  border-right: 5px solid #4db564;
+}
 
-    .financials { 
-        width : 100% ; 
-    }
+.card #delete-btn {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 1.4rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
 
-    #fin-expense { 
-        margin-top : 0 ; 
-    }
+.card:hover #delete-btn {
+  opacity: 1;
+}
+
+.card #delete-btn:hover {
+  background-color: #fee2e2;
+  transform: scale(1.1);
+}
+
+#right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#transactions-title {
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  html,
+  body {
+    padding: 1rem 0.2rem;
+  }
+
+  .main-app {
+    width: 100%;
+  }
+
+  .financials { 
+    font-size : 13px ; 
+    padding : 1.5rem 0 ; 
+  }
+
+  #balance-display {
+    font-size: 1.8rem;
+  }
+
+  .main-balance {
+    padding: 1rem;
+  }
+
+  .transactions {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #expense-value {
+    word-break: break-all;
+    text-align: center;
+  }
+
+  #data-entry-button {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .income-expense-container {
+    flex-direction: column;
+  }
+  .financials {
+    flex: 1;
+  }
+
+  .card {
+    font-size: 12px;
+  }
+
+  #fin-expense {
+    margin-top: 0;
+  }
 }

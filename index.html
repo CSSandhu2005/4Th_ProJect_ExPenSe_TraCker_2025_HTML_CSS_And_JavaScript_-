@@ -4,23 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <title>ExPenSe_TraCker_4Th_ProJect_2025_</title>
   </head>
   <body>
     <div class="main-app">
       <h1 id="main-heading">ExPenSe TraCker</h1>
-      
+
       <div class="main-balance">
         <h3 id="your-balance">YoUr BalAnce</h3>
-        <h1 id="balance-display">₹2,200.00</h1>
+        <h1 id="balance-display">₹0.00</h1>
         <div class="income-expense-container">
           <div class="financials" id="fin-income">
             <h3 class="title">InCome</h3>
-            <h2 id="income-value">₹4,700.00</h2>
+            <h2 id="income-value">₹00.0</h2>
           </div>
           <div class="financials" id="fin-expense">
             <h3 class="title">ExPenSe</h3>
-            <h2 id="expense-value">₹2,500.00</h2>
+            <h2 id="expense-value">₹00.0</h2>
           </div>
         </div>
       </div>
@@ -29,56 +33,12 @@
         <div class="transaction-history">
           <h3 id="transactions-title">TransActions</h3>
           <div class="transactions-wrapper">
-            <!-- <div class="card expense">
-                <span>AirPods</span>
-                <p id="amount">-₹25,000.00</p>
-            </div>
-            <div class="card income">
-                <span>PayCheck 3</span>
-                <p id="amount">₹15,00,000.00</p>
-            </div>
-            <div class="card expense">
-                <span>AirPods</span>
-                <p id="amount">-₹25,000.00</p>
-            </div>
-            <div class="card income">
-                <span>PayCheck 3</span>
-                <p id="amount">₹15,00,000.00</p>
-            </div>
-            
-            <div class="card expense">
-                <span>AirPods</span>
-                <p id="amount">-₹25,000.00</p>
-            </div>
-            <div class="card income">
-                <span>PayCheck 3</span>
-                <p id="amount">₹15,00,000.00</p>
-            </div>
-            
-            <div class="card expense">
-                <span>AirPods</span>
-                <p id="amount">-₹25,000.00</p>
-            </div>
-            <div class="card income">
-                <span>PayCheck 3</span>
-                <p id="amount">₹15,00,000.00</p>
-            </div>
-            
-            <div class="card expense">
-                <span>AirPods</span>
-                <p id="amount">-₹25,000.00</p>
-            </div>
-            <div class="card income">
-                <span>PayCheck 3</span>
-                <p id="amount">₹15,00,000.00</p>
-            </div> -->
+              <!-- List Gets Update Here -->
           </div>
         </div>
 
-
-
         <div class="data-input">
-          <form>
+          <form id="main-form">
             <h2>Add TransActions</h2>
             <div class="input-wrapper">
               <label for="description">Description</label>
@@ -86,21 +46,22 @@
                 type="text"
                 id="description"
                 placeholder="Enter Description..."
+                required
               />
             </div>
 
             <div class="input-wrapper">
-              <label for="amount">Amount</label>
+              <label>Amount</label>
               <input
                 type="number"
-                id="amount"
+                id="amount-input"
                 placeholder="Please Enter Amount..."
+                required
               />
               <p id="info-text">Use Negative (-) For ExPenSes</p>
             </div>
+            <button type="submit">Add TransAction</button>
           </form>
-
-          <button id="data-entry-button">Add TransAction</button>
         </div>
       </div>
     </div>
